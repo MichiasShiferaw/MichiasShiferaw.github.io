@@ -5,10 +5,13 @@
             Michias Shiferaw Website
         </title>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="/styles.css" type="text/css">
             <meta name="keywords" content="programming, JavaScript">
             <meta name="description" content="My Portfolio">
             <meta name="author" content="Michias Shiferaw">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
@@ -58,6 +61,8 @@
                         target="_blank">https://github.com/MichiasShiferaw</a></li>
             </ul>
             </section>
+
+
             
             <section>
                 <div class="grid-container2">
@@ -80,5 +85,45 @@
                     </form>
                 </div>
             </section>
+
+
+                    <div class="game-container">
+                    </div>
+                    <div class="player-info">
+                        <div>
+                            <label for="player-name">Your Name</label>
+                            <input id="player-name" maxlength="10" type="text" />
+                        </div>
+                        <div>
+                            <button id="player-color">Change Color</button>
+                        </div>
+                    </div>
+                    
+                    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+                    <script>      // TODO: Add SDKs for Firebase products that you want to use
+                        // https://firebase.google.com/docs/web/setup#available-libraries
+
+                        // Your web app's Firebase configuration
+                        const firebaseConfig = {
+                            apiKey: "AIzaSyD6e9hgbf0y0RE02g_-KYXLl8Uyz9rm7P0",
+                            authDomain: "multiplayer-game-cfc2d.firebaseapp.com",
+                            databaseURL: "https://multiplayer-game-cfc2d-default-rtdb.firebaseio.com",
+                            projectId: "multiplayer-game-cfc2d",
+                            storageBucket: "multiplayer-game-cfc2d.appspot.com",
+                            messagingSenderId: "432936980983",
+                            appId: "1:432936980983:web:e3f9fc595837abb79b5ef2"
+                        };
+
+                        // Initialize Firebase
+                        firebase.initializeApp(firebaseConfig);
+                    </script>
+                    
+                    <script src="/KeyPressListener.js"></script>
+                    <script src="/app.js"></script>
+
+
+
     </body>
 </html>
