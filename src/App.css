@@ -66,13 +66,13 @@ main {
   width: 14vw;
   transform: rotate(180deg);
 }
-#yourdiv3 {
+/* #yourdiv3 {
   position: absolute;
   top: 0;
   right: calc(250px+50%);
   width: 5vw;
   transform: rotate(180deg);
-}
+} */
 
 #yourdiv4 {
   position: absolute;

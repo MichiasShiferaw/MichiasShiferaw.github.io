@@ -22,10 +22,10 @@ function App() {
             src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman3.png`}
             id="yourdiv2"
           />
-          <img
+          {/* <img
             src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman1.png`}
             id="yourdiv3"
-          />
+          /> */}
 
           <img
             src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman2.png`}
