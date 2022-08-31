@@ -1,56 +1,86 @@
+:root{
+  --zero:#1e2124;
+  --moving: 25vw;
+}
+
 .App {
-  text-align: center;
+  text-align: start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo1{
+  width: 60%;
+  height: auto;
+  padding-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#about .container {
+  border-radius: 1rem;
+}
+@media (max-width: 720px) {
+#mylogo1{
+  padding-top: 3rem;
+}
+}
+
+ @media (max-width: 1440px) {
+  #yourdiv1 {
+    display: none;
   }
-}
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #yourdiv2 {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  #yourdiv3 {
+    display: none;
   }
+    #yourdiv4 {
+      display: none;
+    }
+} 
+
+main {
+  --val1:#fdd5b1;
+    width: 100%;
+      padding: 0px;
+      padding-bottom: 0;
+      height: 100%;
+  background-color: var(--zero);
+  
+}
+
+.titlepac{
+  color: #FFE737;
 }
 
 
-
-/* Retro */
-
-html {
-  font-size: 18px;
+#yourdiv1 {
+  position: absolute;
+  top: 0;
+  right: 0vw;
+  width: 5vw;
+  transform: rotate(180deg);
+}
+#yourdiv2 {
+  position: absolute;
+  top: 0;
+  left: 260px;
+  width: 14vw;
+  transform: rotate(180deg);
+}
+#yourdiv3 {
+  position: absolute;
+  top: 0;
+  right: calc(250px+50%);
+  width: 5vw;
+  transform: rotate(180deg);
 }
 
-body {
-  color: black;
-  font-family: "Questrial", sans-serif;
-  background-color: #ffec63;
-
+#yourdiv4 {
+  position: absolute;
+  top: 50%;
+  right: 0.5vw;
+  width: 5vw;
 }
+
 
 @keyframes slide {
   from {
@@ -61,4 +91,63 @@ body {
     background-position: -120px 60px;
   }
 }
+.card-cover {
+  overflow: hidden;
+  line-height: 1rem;
+}
 
+div.box {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.ghost {
+  width: 2vw;
+  height: 2vw;
+  color: white;
+  animation: sliding 10s infinite;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes sliding {
+
+  25%{
+    translate: var(--moving);
+    transform: rotateY(180deg);
+  }
+  50% {
+    translate: initial;
+    transform: rotateY(180deg);
+  }
+  75% {
+    translate: calc(var(--moving)*-1);
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    translate: initial;
+    transform: rotateY(0deg);
+  }
+}
+
+.bi-caret-right-fill{
+  margin: 0;
+  padding: 0;
+}
+#arrow{
+  animation: glow1 7.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow1 {
+  from {
+        transform: rotateX(180deg);
+  }
+
+  to {
+      transform: rotateX(0deg);
+  }
+}
