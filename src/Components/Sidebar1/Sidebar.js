@@ -57,6 +57,7 @@ const Sidebar=({children})=> {
                   src={`https://MichiasShiferaw.github.io/IMG/Pacman/Pacman.png`}
                   width="25"
                   height="25"
+                  alt='Pac'
 
                 />
               )}
@@ -66,7 +67,7 @@ const Sidebar=({children})=> {
         </div>
         <hr />
         <div>
-          <img className="logo1 pt-2 pb-1 " src={logo} />
+          <img className="logo1 pt-2 pb-1 " src={logo} alt="Logo" />
           <h2
             style={{
               display: isOpen ? "block" : "none",
