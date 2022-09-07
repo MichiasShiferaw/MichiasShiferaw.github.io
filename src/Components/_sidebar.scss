@@ -1,7 +1,9 @@
+$sidebarColor: #0D4677;
+
 .Sidebar {
     height: 100vh;
     transition: all 0.5s;
-    background-color: #0D4677;
+    background-color: $sidebarColor;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -82,14 +84,16 @@
         
         
         a {
-                background-color: white;
+                background-color: $sidebarColor;
+                color:white;
                 text-decoration: underline;
 
-            &:hover{
-                box-shadow: 0.4rem 0.4rem 0 #5384a5;
-                transform: translate(-0.4rem, -0.4rem);
-            }
+            
         
+            }
+            &:hover {
+                box-shadow: 0rem 0.4rem 0 #5384a5;
+                transform: translate(0rem, -0.5rem);
             }
         
         }

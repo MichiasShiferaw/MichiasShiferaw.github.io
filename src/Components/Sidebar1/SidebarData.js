@@ -1,14 +1,16 @@
+ var size='30';
+// export const SidebarData=({size})=>[
 export const SidebarData=[
     {
         title:"Home",
-        icon:<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house-door" viewBox="0 0 16 16">
+        icon:<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className="bi bi-house-door" viewBox="0 0 16 16">
   <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
 </svg>,
         link:"/home"
 
     },        {
         title:"Code",
-        icon:<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-code-slash" viewBox="0 0 16 16">
+        icon:<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className="bi bi-code-slash" viewBox="0 0 16 16">
   <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
 </svg>,
         link:"/code"
@@ -16,7 +18,7 @@ export const SidebarData=[
     },
      {
         title:"Project",
-        icon:<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-kanban-fill" viewBox="0 0 16 16">
+        icon:<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className="bi bi-kanban-fill" viewBox="0 0 16 16">
   <path d="M2.5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11zm5 2h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm-5 1a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm9-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
 </svg>,
         link:"/project"
@@ -25,7 +27,7 @@ export const SidebarData=[
 
         {
         title:"Contact",
-        icon:<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-workspace" viewBox="0 0 16 16">
+        icon:<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" className="bi bi-person-workspace" viewBox="0 0 16 16">
   <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
   <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
 </svg>,
@@ -35,14 +37,15 @@ export const SidebarData=[
 
 ]
 
+var size1 = "2.1rem";
 export const ProfileInfo = [
   {
     title: "Github",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width={size1}
+        height={size1}
         fill="currentColor"
         className="bi bi-github"
         viewBox="0 0 16 16"
@@ -57,8 +60,8 @@ export const ProfileInfo = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width={size1}
+        height={size1}
         fill="currentColor"
         className="bi bi-linkedin"
         viewBox="0 0 16 16"
@@ -73,8 +76,8 @@ export const ProfileInfo = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width={size1}
+        height={size1}
         fill="currentColor"
         className="bi bi-twitter"
         viewBox="0 0 16 16"
@@ -89,8 +92,8 @@ export const ProfileInfo = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width={size1}
+        height={size1}
         fill="currentColor"
         className="bi bi-youtube"
         viewBox="0 0 16 16"
@@ -105,8 +108,8 @@ export const ProfileInfo = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width={size1}
+        height={size1}
         fill="currentColor"
         className="bi bi-spotify"
         viewBox="0 0 16 16"
@@ -117,3 +120,4 @@ export const ProfileInfo = [
     link: "https://open.spotify.com/user/michias11?si=b54057de4d50407a",
   },
 ];
+

@@ -1,7 +1,6 @@
 import './App.css';
 
 import Sidebar from './Components/Sidebar1/Sidebar';
-import { ProfileInfo } from './Components/Sidebar1/SidebarData';
 import logo from './Portrait1.png';
 import About from './Components/About/About';
 import Experience from './Components/Experience/Experience';
@@ -9,9 +8,50 @@ import Experience from './Components/Experience/Experience';
 import Project from './Components/Project/Project';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
+import { useState } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
+import Loader from './Components/Loader';
 function App() {
+  const [lyricsItem,setLyricsItems]= useState(null);
+  //const [loading,setLoading]= useState(false);
+  const [rendered, setRendered] = useState(false);
+  const [data1, setdata1]= useState([]);
+  const [loading, setLoading] = useState(undefined);
+  const [completed, setCompleted]= useState(undefined);
+
+  const lyricsFunction = async()=>{
+    try{
+      const data = await axios
+        .get(`https://api.sampleapis.com/wines/reds`)
+        .then((res) => {
+          console.log(res);
+          setLyricsItems(res.data.rating);
+        });
+        setLoading(true);
+        // setTimeout(()=>{
+        //   console.log("Tester");
+        // },3000);
+    } catch(e){
+      console.log(e)
+    }
+  }
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      lyricsFunction();
+
+    },3000);
+    setLoading(false);
+    console.log("i fire once");
+    
+  },[]);
   return (
     <div className="App">
+      {loading?(
+        
+
+      
       <Sidebar>
         <div className="container mt-5" id="Home">
           <img
@@ -22,11 +62,6 @@ function App() {
             src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman3.png`}
             id="yourdiv2"
           />
-          {/* <img
-            src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman1.png`}
-            id="yourdiv3"
-          /> */}
-
           <img
             src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman2.png`}
             id="yourdiv4"
@@ -65,6 +100,10 @@ function App() {
 
         <Footer />
       </Sidebar>
+      ):(
+        <Loader/>
+      )}
+      {/* {loading?(lyricsItem):(console.log("Hi"))} */}
     </div>
   );
 }

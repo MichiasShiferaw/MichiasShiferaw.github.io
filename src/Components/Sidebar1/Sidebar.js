@@ -33,10 +33,7 @@ const Sidebar=({children})=> {
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
             Logo
           </h1>
-          <div
-            style={{ marginLeft: isOpen ? "80px" : "0px" }}
-            className="bars"
-          >
+          <div style={{ marginLeft: isOpen ? "80px" : "0px" }} className="bars">
             <button className="btn nav_close p-0" onClick={toggle}>
               {isOpen ? (
                 <svg
@@ -55,10 +52,9 @@ const Sidebar=({children})=> {
               ) : (
                 <img
                   src={`https://MichiasShiferaw.github.io/IMG/Pacman/Pacman.png`}
-                  width="25"
-                  height="25"
-                  alt='Pac'
-
+                  // width={"100%"}
+                  // height={"100%"}
+                  alt="Pac"
                 />
               )}
             </button>
@@ -85,6 +81,7 @@ const Sidebar=({children})=> {
                 key={key}
                 id={activeId === val.title ? "active" : ""}
                 onClick={() => tester(val.title)}
+                title={val.title}
               >
                 <a className="row" href={`#${val.title}`}>
                   <div id="icon">{val.icon}</div>
@@ -111,7 +108,8 @@ const Sidebar=({children})=> {
                   target="_blank"
                 >
                   <div id="icon" title={val.title}>
-                    {val.icon}
+                    {val.icon
+                    }
                   </div>
                 </a>
               </li>
@@ -119,10 +117,7 @@ const Sidebar=({children})=> {
           })}
         </ul>
       </div>
-      <main>
-
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 }
