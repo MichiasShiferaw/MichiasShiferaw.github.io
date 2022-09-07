@@ -1,19 +1,16 @@
-import 'firebase/app';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "@firebase/firestore";
 
-import { initializeApp } from 'firebase/app';
-import 'firebase/storage'
-import {getStorage} from 'firebase/storage'
-
-// Your web app's Firebase configuration
 const firebaseConfig = initializeApp({
-  apiKey: "AIzaSyD-hnbdhDlWCtJfbySAMDd9AN7i8MKM9EU",
-  authDomain: "personalwebsite-afdf9.firebaseapp.com",
-  projectId: "personalwebsite-afdf9",
-  storageBucket: "personalwebsite-afdf9.appspot.com",
-  messagingSenderId: "263110809103",
-  appId: "1:263110809103:web:875d6f6377921ab094357a"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PRODUCT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 });
 
-const storage = getStorage(firebaseConfig);
 
-export default storage;
+const app = (firebaseConfig);
+
+export const db = getFirestore(app);

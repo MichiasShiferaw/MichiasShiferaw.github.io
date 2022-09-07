@@ -12,10 +12,11 @@ $glowing-color:#0A00FB;
     flex-direction: column;
     animation: glow 1.5s ease-in-out infinite alternate;
     .card-title{
-        font-size: $font-size-xl;
+        font-size: $font-size-lg;
         padding-bottom: $base-padding;
         font-weight: bold;
         line-height: 5.2vh;
+        overflow:hidden;
     }
 
     .card-body{

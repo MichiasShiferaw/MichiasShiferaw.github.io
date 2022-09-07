@@ -1,21 +1,13 @@
 import React from 'react';
-// import Bootstrap from "../../Assets/bootstrap1.png";
-// import Firebase from "../../Assets/firebase.png";
-// import React1 from "../../Assets/react.png";
-// import Vanilla from "../../Assets/vanillajs.png";
-import { ProjectData } from './ProjectData';
+// import { ProjectData } from './ProjectData';
 
-function Work() {
-  // const bootstrap="bootstrap1.png";
-  // const bootstrap="bootstrap1.png";
-  // const bootstrap="bootstrap1.png";
-  // const vanillajs="bootstrap1.png";
+function Work(props) {
   return (
      <section id="Project" className="mt-2">
     <div className="container">
       <h2 className="mb-2 text-start text-pacman">My Projects ...</h2>
       <div className="row gap-2">
-        {ProjectData.map((val,key)=>{
+        {(props.project).map((val,key)=>{
           return (
             <div key={key} className="col-12-xs col-6-md col-4-lg">
               <div
@@ -28,8 +20,7 @@ function Work() {
 
                 <img src="/img/mario.png" alt="" />
                 <p className="m-1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Totam, hic!
+                  {val.description}
                 </p>
                 <div className="card-footer display-f mt-auto justify-space-between">
                   <div className="mr-auto mt-auto text-muted">
