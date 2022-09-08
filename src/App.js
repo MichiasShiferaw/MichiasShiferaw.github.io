@@ -14,12 +14,7 @@ import Loader from './Components/Loader';
 import {collection, getDocs} from 'firebase/firestore';
 import { db } from './config/firebase';
 function App() {
-  const [lyricsItem,setLyricsItems]= useState(null);
-  //const [loading,setLoading]= useState(false);
-  const [rendered, setRendered] = useState(false);
-  const [data1, setdata1]= useState([]);
   const [loading, setLoading] = useState(undefined);
-  const [completed, setCompleted]= useState(undefined);
 
     const[educationExp, setEducationExp]=useState([]);
     const [projectExp, setProjectExp] = useState([]);
