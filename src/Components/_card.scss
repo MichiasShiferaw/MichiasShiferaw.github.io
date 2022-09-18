@@ -87,6 +87,10 @@ $glowing-color:#0A00FB;
         margin-top: 0.5rem;
     }
 
+    .content{
+        overflow: hidden;
+    }
+
     hr.border{
         // height: 0.4rem;
         border-top:3px solid white;

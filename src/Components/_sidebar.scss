@@ -119,6 +119,11 @@ $sidebarColor: #0D4677;
     background-color: #041E42;
 }
 
+.SidebarList li{
+    margin-bottom: 0.75rem !important;
+
+}
+
 @media screen and (max-width: 780px) {
     .Sidebar {
         display: none;

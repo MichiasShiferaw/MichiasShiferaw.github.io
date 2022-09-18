@@ -42,4 +42,8 @@ $val in $colors {
             border-top: 2px solid black;
         }
 
+    li:focus,li:hover{
+        transform:scale(1.2);
+    }
+
 }

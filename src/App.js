@@ -7,11 +7,9 @@ import Experience from './Components/Experience/Experience';
 import Project from './Components/Project/Project';
 import Footer from './Components/Footer/Footer';
 import Contact from './Components/Contact/Contact';
-import { useState } from 'react';
-import axios from 'axios';
-import { useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import Loader from './Components/Loader';
-import {collection, getDocs} from 'firebase/firestore';
+import {collection, getDocs, orderBy,query} from 'firebase/firestore';
 import { db } from './config/firebase';
 function App() {
   const [loading, setLoading] = useState(undefined);
@@ -23,16 +21,15 @@ function App() {
   const eduExpCollectionRef = collection(db, "eduExp");
     const projectCollectionRef = collection(db, "project");
 
-
     const getWorkExp = async () => {
       try{
-      let data = await getDocs(workExpCollectionRef);
+      let data = await getDocs(query(workExpCollectionRef,orderBy('order','desc')));
       setWorkExp(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      data = await getDocs(eduExpCollectionRef);
+      data = await getDocs(query(eduExpCollectionRef,orderBy('order','desc')));
       setEducationExp(
         data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
-      data = await getDocs(projectCollectionRef);
+      data = await getDocs(query(projectCollectionRef,orderBy('order','desc')));
       setProjectExp(
         data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
@@ -47,10 +44,6 @@ function App() {
       getWorkExp();
     }, 3000);
     setLoading(false);
-
-    
-    
-
   },[]);
   return (
     <div className="App">
@@ -60,14 +53,17 @@ function App() {
             <img
               src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman4.png`}
               id="yourdiv1"
+              alt="tile"
             />
             <img
               src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman3.png`}
               id="yourdiv2"
+              alt="tile"
             />
             <img
               src={`https://MichiasShiferaw.github.io/IMG/Pacman/pacman2.png`}
               id="yourdiv4"
+              alt="tile"
             />
             <div className="row justify-center">
               <div className="col-12-xs col-9-md">
@@ -106,7 +102,6 @@ function App() {
       ) : (
         <Loader />
       )}
-      {/* {loading?(lyricsItem):(console.log("Hi"))} */}
     </div>
   );
 }

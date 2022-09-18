@@ -77,7 +77,7 @@ const Sidebar=({children})=> {
           {SidebarData.map((val, key) => {
             return (
               <li
-                className="row font-md"
+                className="mb-5 row font-md"
                 key={key}
                 id={activeId === val.title ? "active" : ""}
                 onClick={() => tester(val.title)}
